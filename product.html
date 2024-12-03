@@ -8,21 +8,27 @@
     <link rel="stylesheet" href="styles/product.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="leftNav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="sizing.html">Sizing Guide</a>
+                <a href="product.html">Products</a>
+                <a href="faq.html">Support</a>
+            </div>
+            <div class="rightNav">
+                <a href="cart.html">My Cart</a>
+            </div>
+        </nav>
+    </header>
 
-<header>
-    <nav>
-        <div class="leftNav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="sizing.html">Sizing Guide</a>
-            <a href="product.html">Products</a>
-            <a href="faq.html">Support</a>
+    <main>
+        <div id="product-container" class="product-container">
+            <!-- Products will be dynamically inserted here -->
         </div>
-        <div class="rightNav">
-            <a href="cart.html">My Cart</a>
-        </div>
-    </nav>
-</header>
+    </main>
     
+    <script src="scripts/getProducts.js" type="module"></script>
 </body>
 </html>
