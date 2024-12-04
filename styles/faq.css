@@ -4,6 +4,7 @@ body {
 body main {
   max-width: 80ch;
   margin: 0 auto;
+  padding: 0.5rem;
 }
 
 body a {
@@ -16,10 +17,12 @@ h2 {
 
 #puddle {
   display: block;
-  width: 33rem;
+  max-width: 33rem;
+  width: 90vw;
   height: auto;
   margin: 0 auto;
 }
+
 /* =========== Accordion =========== */
 .accordion {
   margin: 20px;
