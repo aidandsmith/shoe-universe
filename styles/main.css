@@ -82,6 +82,7 @@ nav a:hover {
     background-color: #196ba3;
     color: white;
     cursor: pointer;
+    margin-bottom: 10rem;
 }
 
 /* Welcome */
@@ -90,7 +91,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4rem;
+    margin: 0 auto;
+    max-width: 80ch;
 }
 
 .welcome h2 {
@@ -108,7 +110,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
+    margin: 0 auto;
+    max-width: 80ch;
 }
 
 .newsletterText {
