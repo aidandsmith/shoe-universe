@@ -1,0 +1,51 @@
+body {
+}
+
+body main {
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+body a {
+}
+
+h1,
+h2 {
+  color: #196ba3;
+}
+/* =========== Accordion =========== */
+.accordion {
+  margin: 20px;
+
+  border: 2px solid #196ba3;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #196ba3;
+}
+
+.accordion-header {
+  background-color: #f9f9f9;
+  cursor: pointer;
+  padding: 1rem;
+  font-weight: bold;
+  border: none;
+  text-align: left;
+  outline: none;
+  width: 100%;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+}
+
+.accordion-header.active + .accordion-content {
+  display: block;
+}
+
+.accordionIcon {
+  float: right;
+  font-size: 1rem;
+}
+/* =============================== */
