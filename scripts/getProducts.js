@@ -1,5 +1,19 @@
 const fetchProducts = async () => {
-	const url = 'https://jordan-shoes.p.rapidapi.com/shoes';
+	
+    const cachedData = localStorage.getItem('jordan-shoes');
+    const cachedTimestamp = localStorage.getItem('jordan-shoes-timestamp');
+    const refreshInterval = 30 * 60 * 1000;
+
+    if (cachedData && cachedTimestamp) {
+        const isDataFresh = (Date.now() - parseInt(cachedTimestamp)) < refreshInterval;
+        if (isDataFresh){
+            console.log('Using cached data');
+            displayProducts(JSON.parse(cachedData));
+            return;
+        }
+    }
+    
+    const url = 'https://jordan-shoes.p.rapidapi.com/shoes';
 	const options = {
 		method: 'GET',
 		headers: {
@@ -12,6 +26,8 @@ const fetchProducts = async () => {
 		const response = await fetch(url, options);
 		const result = await response.json();
 		console.log('API Response:', result);
+        localStorage.setItem('jordan-shoes', JSON.stringify(result));
+        localStorage.setItem('jordan-shoes-timestamp', Date.now().toString());
 		displayProducts(result);
 	} catch (error) {
 		console.error(error);
