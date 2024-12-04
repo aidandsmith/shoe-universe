@@ -8,10 +8,12 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
+
 #nav-logo {
   width: 11rem;
   height: auto;
 }
+
 nav {
   background-color: #f9f9f9;
   padding: 1rem;
@@ -95,6 +97,7 @@ nav a:hover {
   align-items: center;
   margin: 0 auto;
   max-width: 80ch;
+  margin: 2rem;
 }
 
 .welcome h2 {
@@ -114,6 +117,7 @@ nav a:hover {
   align-items: center;
   margin: 0 auto;
   max-width: 80ch;
+  margin: 2rem;
 }
 
 .newsletterText {
@@ -153,7 +157,7 @@ input[type="email"] {
   border-radius: 3px;
 }
 
-.emailButton {
+#emailButton {
   padding: 1.2rem;
   padding: 10px;
   margin: 8px 0px;
@@ -185,4 +189,27 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+
+
+@media only screen and (max-width: 1050px) {
+  .heroText h1 {
+    font-size: 5rem;
+  }
+
+  .heroText p {
+    font-size: 3rem;
+  }
+} 
+
+
+@media only screen and (max-width: 600px) {
+  .heroText h1 {
+    font-size: 3rem;
+  }
+
+  .heroText p {
+    font-size: 2rem;
+  }
 }
