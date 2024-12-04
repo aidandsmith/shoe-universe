@@ -170,13 +170,14 @@ input[type="email"] {
 
 footer {
   background-color: #fbf7f5;
-  padding: 4rem;
+  padding: 2rem;
 }
 
-.footerLogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#footerLogo {
+  display: block;
+  margin: 0 auto;
+  width: 18rem;
+  height: auto;
 }
 
 .footerElements {

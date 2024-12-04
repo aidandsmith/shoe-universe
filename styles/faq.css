@@ -13,6 +13,13 @@ h1,
 h2 {
   color: #196ba3;
 }
+
+#puddle {
+  display: block;
+  width: 33rem;
+  height: auto;
+  margin: 0 auto;
+}
 /* =========== Accordion =========== */
 .accordion {
   margin: 20px;
