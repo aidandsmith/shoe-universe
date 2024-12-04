@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="styles/product.css">
 </head>
 <body>
-        <header>
-            <nav>
-                <div class="leftNav">
+    <header>
+        <nav>
+            <div class="leftNav">
                 <img src="/img/shoeniverseLogo.png" alt="" width="200px">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
@@ -20,11 +20,15 @@
                 </div>
                 <div class="rightNav">
                     <a href="cart.html">My Cart</a>
-                <img src="/img/shopping-cart.png" alt="" height="40">
+                    <img src="/img/shopping-cart.png" alt="" height="40">
                 </div>
             </nav>
-        </header>
-
+    </header>
+    <main>
+        <div id="product-container" class="product-container">
+            
+        </div>
+    </main>
     <footer>
         <div class="footerLogo">
             <img src="/img/shoeniverseLogo.png" alt="" width="300">
@@ -47,13 +51,6 @@
             </div>
         </div>
     </footer>
-    
-    <main>
-        <div id="product-container" class="product-container">
-            <!-- Products will be dynamically inserted here -->
-        </div>
-    </main>
-    
-    <script src="scripts/getProducts.js" type="module"></script>
 </body>
+<script src="scripts/getProducts.js" type="module"></script>
 </html>

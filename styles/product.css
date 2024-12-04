@@ -28,6 +28,8 @@
 }
 
 .product-info {
+    margin: 0;
+    padding: 0;
     width: 60%;
     padding: 1.5rem;
     display: flex;
@@ -50,16 +52,16 @@
 }
 
 .product-description {
-    font-size: 0.8rem;
-    color: #4b5563;
-    margin-bottom: 1rem;
-    line-height: 1.4;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     line-clamp: 3;
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.4;
     overflow: hidden;
-    transition: all 0.3s ease;
+    margin: 0;
 }
 
 .product-specs {
