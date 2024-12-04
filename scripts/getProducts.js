@@ -55,11 +55,11 @@ const displayProducts = (products) => {
 		
 		const imageUrl = product.img || 'https://via.placeholder.com/300x250?text=No+Image+Available';
 		
-		const card = document.createElement('div');
+		const card = document.createElement('section');
 		card.className = 'product-card';
 		
 		card.innerHTML = `
-			<div class="product-card">
+			<section class="product-card">
         <div class="product-image">
             <img src="${imageUrl}" alt="${product.name}">
         </div>
@@ -76,15 +76,21 @@ const displayProducts = (products) => {
                     ${availableSizes.map(size => `<span class="size">${size}</span>`).join('')}
                 </div>
             </div>
-            <button class="view-product-btn">
+            <button class="view-product-btn" data-product-id="${product.id}">
                 View Product
                 <span class="chevron-right">›</span>
             </button>
         </div>
-    </div>
+    </section>
 		`;
 		
 		productContainer.appendChild(card);
+		
+		// Add click handler for view product button
+		const viewProductBtn = card.querySelector('.view-product-btn');
+		viewProductBtn.addEventListener('click', () => {
+			window.location.href = `product-detail.html?id=${product.id}`;
+		});
 	});
 };
 
