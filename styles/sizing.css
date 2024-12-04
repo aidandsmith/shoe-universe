@@ -41,7 +41,7 @@ tbody tr:hover {
   background-color: #eaeaea;
 }
 
-#table-heading {
+.table-heading {
   margin: 0 auto;
   text-align: center;
 }
