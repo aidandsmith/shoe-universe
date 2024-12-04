@@ -62,8 +62,9 @@ nav a:hover {
 }
 
 .heroText h1 {
-    font-size: 8rem;
+    font-size: 10rem;
     font-weight: 600;
+    color: #196ba3;
 }
 
 .heroText p {
@@ -94,6 +95,7 @@ nav a:hover {
 
 .welcome h2 {
     font-size: 3rem;
+    color: #196ba3;
 }
 
 .welcome p {
@@ -118,6 +120,7 @@ nav a:hover {
 
 .newsletter h3 {
     font-size: 3rem;
+    color: #196ba3;
 }
 
 .newsletter p {
