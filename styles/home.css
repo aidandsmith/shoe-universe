@@ -1,0 +1,142 @@
+/* Hero */
+
+.heroImg {
+  background-image: url(/img/shoeHero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 80vh;
+}
+
+.heroText {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.heroText h1 {
+  font-size: 10rem;
+  font-weight: 600;
+  color: #196ba3;
+}
+
+.heroText p {
+  font-size: 4rem;
+}
+
+.heroButton {
+  padding: 1rem 1.4rem;
+  border: black 2px solid;
+  color: black;
+  font-size: 1.2rem;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #196ba3;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10rem;
+}
+
+/* Welcome */
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 80ch;
+}
+
+.welcome h2 {
+  font-size: 3rem;
+  color: #196ba3;
+}
+
+.welcome p {
+  font-size: 1.4rem;
+}
+
+/* Newsletter */
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 80ch;
+}
+
+.newsletterText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter h3 {
+  font-size: 3rem;
+  color: #196ba3;
+}
+
+.newsletter p {
+  font-size: 1.2rem;
+}
+
+.newsletterBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.newsletterBox label {
+  font-size: 1.2rem;
+  margin: 1rem;
+  font-weight: bold;
+}
+
+input[type="email"] {
+  min-width: 30ch;
+  padding: 10px;
+  margin: 8px 0px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+#emailButton {
+  padding: 1.2rem;
+  padding: 10px;
+  margin: 8px 0px;
+  margin-left: 1.2rem;
+  cursor: pointer;
+  background-color: #196ba3;
+  color: white;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .heroText h1 {
+    font-size: 5rem;
+  }
+
+  .heroText p {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heroText h1 {
+    font-size: 3rem;
+  }
+
+  .heroText p {
+    font-size: 2rem;
+  }
+}
