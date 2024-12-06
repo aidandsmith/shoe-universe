@@ -181,7 +181,7 @@ input[type="email"] {
 
 footer {
   background-color: #fbf7f5;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 #footerLogo {
@@ -192,12 +192,25 @@ footer {
 }
 
 .footerElements {
+  max-width: 80ch;
+  margin: 0 auto;
   display: flex;
+
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
+.footerElements h4 {
+  margin: 0.5rem 0;
+}
+
+.footerElements p {
+  margin: 0.5rem 0;
+}
+
+.footerLinks {
+  margin: 0 0.5rem;
+}
 @media only screen and (max-width: 1050px) {
   .heroText h1 {
     font-size: 5rem;
