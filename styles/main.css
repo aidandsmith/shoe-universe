@@ -18,7 +18,9 @@ nav {
   background-color: #f9f9f9;
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 nav a {
@@ -32,9 +34,16 @@ nav a:hover {
   color: #196ba3;
 }
 
+.navLinks {
+  display: inline-block;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
 .leftNav {
   display: flex;
-  justify-content: row;
+  flex-wrap: wrap;
+  /* justify-content: row; */
   align-items: center;
 }
 
@@ -191,8 +200,6 @@ footer {
   align-items: center;
 }
 
-
-
 @media only screen and (max-width: 1050px) {
   .heroText h1 {
     font-size: 5rem;
@@ -201,8 +208,7 @@ footer {
   .heroText p {
     font-size: 3rem;
   }
-} 
-
+}
 
 @media only screen and (max-width: 600px) {
   .heroText h1 {
