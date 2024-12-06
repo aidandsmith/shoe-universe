@@ -36,14 +36,12 @@ nav a:hover {
 
 .navLinks {
   display: inline-block;
-  justify-content: center;
   margin-left: 2rem;
 }
 
 .leftNav {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: row; */
   align-items: center;
 }
 
