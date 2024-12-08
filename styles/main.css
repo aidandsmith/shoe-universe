@@ -86,7 +86,7 @@ nav a:hover {
 
 footer {
   background-color: #fbf7f5;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 #footerLogo {
@@ -106,10 +106,12 @@ footer {
 }
 
 .footerElements h4 {
+  font-size: 1.1rem;
   margin: 0.5rem 0;
 }
 
 .footerElements p {
+  font-size: 0.9rem;
   margin: 0.5rem 0;
 }
 

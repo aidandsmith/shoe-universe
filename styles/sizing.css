@@ -1,3 +1,7 @@
+main h2 {
+  font-size: 2.3rem;
+}
+
 /* =========== Tables =========== */
 table {
   border-collapse: collapse;
@@ -13,10 +17,10 @@ thead {
 
 th,
 td {
-  padding: 1rem;
+  padding: 0.9rem;
   border: 1px solid #ddd;
   text-align: center;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 tbody tr:nth-child(even) {
@@ -41,4 +45,11 @@ tbody tr:hover {
 
 .table-container {
   margin: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  th,
+  td {
+    padding: 0.5rem;
+  }
 }
