@@ -21,7 +21,6 @@
 .heroText h1 {
   font-size: 10rem;
   font-weight: 600;
-  color: #196ba3;
 }
 
 .heroText p {
@@ -52,15 +51,6 @@
   max-width: 80ch;
 }
 
-.welcome h2 {
-  font-size: 3rem;
-  color: #196ba3;
-}
-
-.welcome p {
-  font-size: 1.4rem;
-}
-
 /* Newsletter */
 
 .newsletter {
@@ -76,11 +66,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.newsletter h3 {
-  font-size: 3rem;
-  color: #196ba3;
 }
 
 .newsletter p {
@@ -103,7 +88,7 @@
 input[type="email"] {
   min-width: 30ch;
   padding: 10px;
-  margin: 8px 0px;
+  margin: 1rem 0rem;
   border: 1px solid black;
   border-radius: 3px;
 }
