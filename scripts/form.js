@@ -69,9 +69,19 @@ const checkInputs = () => {
     const lastnameValue = lastname.value.trim();
     const addressValue = address.value.trim();
     const cityValue = city.value.trim();
+    const provinceOrTerritoryValue = provinceOrTerritory.value.trim();
+    const postalCodeValue = postalCode.value.trim();
     const ccnValue = ccn.value.trim();
     const cvvValue = cvv.value.trim();
     const expiryValue = expiry.value.trim();
+    
+    if (addressValue === '') {
+        setError(address, 'Address cannot be blank');
+    } else if (addressValue.length < 5) {
+        setError(address, 'Address is too short');
+    } else {
+        setSuccess(address);
+    }
 
     if(emailValue === '') {
         setError(email, 'Email cannot be blank');
@@ -125,7 +135,7 @@ const checkInputs = () => {
         setSuccess(expiry);
     }
  
-    if(emailValue !== '' && phoneValue !== '' && firstnameValue !== '' && lastnameValue !== '' && ccnValue !== '' && cvvValue !== '' && expiryValue !== '' && isValidEmail(emailValue) && isValidPhone(phoneValue) && isValidCVV(cvvValue) && isValidExpiry(expiryValue) && isValidCCN(ccnValue)) {
-        window.location.href = 'key-page.html';
+    if(addressValue !== '' && emailValue !== '' && phoneValue !== '' && firstnameValue !== '' && lastnameValue !== '' && ccnValue !== '' && cvvValue !== '' && expiryValue !== '' && isValidEmail(emailValue) && isValidPhone(phoneValue) && isValidCVV(cvvValue) && isValidExpiry(expiryValue) && isValidCCN(ccnValue)) {
+        window.location.href = 'confirmation.html';
     }
 };
