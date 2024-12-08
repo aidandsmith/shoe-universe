@@ -33,11 +33,6 @@
     margin-bottom: 0.5rem;
 }
 
-.cart-item-details .price {
-    font-weight: 600;
-    font-size: 1.25rem;
-}
-
 .quantity-controls {
     display: flex;
     align-items: center;
