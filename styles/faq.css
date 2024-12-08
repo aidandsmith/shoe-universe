@@ -4,6 +4,7 @@
   width: 90vw;
   height: auto;
   margin: 1rem auto;
+  border-radius: 9px;
 }
 
 /* =========== Accordion =========== */
@@ -39,4 +40,13 @@
 .accordionIcon {
   float: right;
 }
-/* =============================== */
+
+@media screen and (max-width: 480px) {
+  .accordion-header {
+    padding: 0.5rem;
+  }
+
+  .accordion-content {
+    padding: 0.5rem;
+  }
+}
