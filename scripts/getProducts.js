@@ -45,7 +45,6 @@ const displayProducts = (products) => {
 	const productContainer = document.getElementById('product-container');
 	
 	products.forEach(product => {
-		// Get available sizes and convert to US
 		const availableSizes = product.sizes
 			? product.sizes
 				.filter(size => size.is_available)
@@ -86,7 +85,6 @@ const displayProducts = (products) => {
 		
 		productContainer.appendChild(card);
 		
-		// Add click handler for view product button
 		const viewProductBtn = card.querySelector('.view-product-btn');
 		viewProductBtn.addEventListener('click', () => {
 			window.location.href = `product-detail.html?id=${product.id}`;

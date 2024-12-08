@@ -32,6 +32,12 @@ const updateQuantity = (index, change) => {
     updateCartCount();
 };
 
+const convertToUSSize = (ukSize) => {
+	const uk = parseFloat(ukSize.replace('UK ', ''));
+	const usSize = (uk + 1).toFixed(1);
+	return `US ${usSize}`;
+};
+
 const displayCart = () => {
     const cart = getCart();
     
@@ -47,7 +53,8 @@ const displayCart = () => {
         return;
     }
 
-    cartContainer.innerHTML = cart.map((item, index) => `
+    cartContainer.innerHTML = cart.map((item, index) =>
+        `
         <div class="cart-item">
             <div class="cart-item-image">
                 <img src="${item.image || 'https://via.placeholder.com/150?text=No+Image'}" 
@@ -55,7 +62,7 @@ const displayCart = () => {
             </div>
             <div class="cart-item-details">
                 <h3>${item.name}</h3>
-                <p>Size: ${item.size}</p>
+                <p>Size: ${convertToUSSize(item.size)}</p>
                 <div class="price">$${item.price}</div>
                 <div class="quantity-controls">
                     <button onclick="updateQuantity(${index}, -1)">-</button>
