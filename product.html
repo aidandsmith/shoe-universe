@@ -6,6 +6,7 @@
     <title>Shoeniverse | Products</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/product.css">
+    <script defer src="scripts/cartCount.js"></script>
 </head>
 <body>
     <header>
@@ -19,8 +20,12 @@
                     <a href="faq.html">Support</a>
                 </div>
                 <div class="rightNav">
-                    <a href="cart.html">My Cart</a>
-                    <img src="/img/shopping-cart.png" alt="" height="40">
+                    <div class="cart-icon">
+                        <a href="cart.html">
+                            <img src="/img/shopping-cart.png" alt="Cart" height="40">
+                            <span class="cart-count" id="cart-count">0</span>
+                        </a>
+                    </div>
                 </div>
             </nav>
     </header>

@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoeniverse | My Cart</title>
+    <title>Shopping Cart - Jordan Shoes</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="scripts/cart.js"></script>
+    <script defer src="scripts/cartCount.js"></script>
 </head>
 <body>
-
     <header>
         <nav>
             <div class="leftNav">
@@ -20,12 +22,22 @@
                 <a href="faq.html">Support</a>
             </div>
             <div class="rightNav">
-                <a href="cart.html">My Cart</a>
-                <img src="/img/shopping-cart.png" alt="" height="40">
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <img src="/img/shopping-cart.png" alt="Cart" height="40">
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
-    
+
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div id="cart-items" class="cart-items"></div>
+        <div id="cart-summary" class="cart-summary"></div>
+    </div>
+
     <footer>
         <div class="footerLogo">
             <img src="/img/shoeniverseLogo.png" alt="" width="300">
@@ -48,6 +60,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

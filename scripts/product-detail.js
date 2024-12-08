@@ -11,6 +11,11 @@ const convertToUSSize = (ukSize) => {
 	return `US ${usSize}`;
 };
 
+const getCart = () => {
+    const cart = localStorage.getItem('cart');
+    return cart ? JSON.parse(cart) : [];
+};
+
 const displayProductDetail = (product) => {
     const productDetailContainer = document.getElementById('product-detail');
     // Gets 3 random products to display as related products
@@ -112,6 +117,38 @@ const displayProductDetail = (product) => {
             const productId = item.dataset.productId;
             window.location.href = `product-detail.html?id=${productId}`;
         });
+    });
+
+    buyNowBtn.addEventListener('click', () => {
+        const selectedSize = productDetailContainer.querySelector('.size-btn.selected');
+        if (!selectedSize) return;
+
+        const cart = getCart();
+        const cartItem = {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            size: selectedSize.dataset.size,
+            image: product.img,
+            quantity: 1
+        };
+
+        cart.push(cartItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        updateCartCount();
+        
+        // Optional: Show success message
+        buyNowBtn.innerHTML = `
+            <span class="btn-text">Added to Cart!</span>
+            <span class="btn-icon">✓</span>
+        `;
+        setTimeout(() => {
+            buyNowBtn.innerHTML = `
+                <span class="btn-text">Add to Cart</span>
+                <span class="btn-icon">→</span>
+            `;
+        }, 2000);
     });
 };
 
