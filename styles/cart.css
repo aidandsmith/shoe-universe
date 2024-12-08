@@ -4,12 +4,6 @@
     padding: 2rem;
 }
 
-h1 {
-    font-size: 2rem;
-    color: #1a1a1a;
-    margin-bottom: 2rem;
-}
-
 .cart-items {
     display: flex;
     flex-direction: column;
