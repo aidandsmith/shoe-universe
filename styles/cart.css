@@ -25,18 +25,11 @@
     object-fit: contain;
 }
 
-.cart-item-details {
-    flex: 1;
-}
-
 .cart-item-details h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .cart-item-details p {
-    color: #666;
     margin-bottom: 0.5rem;
 }
 
@@ -70,7 +63,6 @@
     white-space: nowrap;
     height: auto;
     width: auto;
-    transition: color 0.2s ease;
 }
 
 .quantity-controls button:hover {
@@ -79,7 +71,6 @@
 
 .remove-btn:hover {
     color: #ff4444;
-    background: none;
 }
 
 .cart-summary-content {
@@ -96,8 +87,6 @@
 }
 
 .summary-row.total {
-    font-size: 1.25rem;
-    font-weight: 600;
     border-top: 1px solid #ddd;
     padding-top: 1rem;
 }
@@ -129,7 +118,6 @@
 }
 
 .empty-cart .btn-primary {
-    display: inline-block;
     padding: 0.75rem 1.5rem;
     background-color: #196ba3;
     color: white;

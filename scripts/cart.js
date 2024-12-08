@@ -57,7 +57,7 @@ const displayCart = () => {
         `
         <div class="cart-item">
             <div class="cart-item-image">
-                <img src="${item.image || 'https://via.placeholder.com/150?text=No+Image'}" 
+                <img src="${item.image}" 
                      alt="${item.name}">
             </div>
             <div class="cart-item-details">
