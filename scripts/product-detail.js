@@ -69,7 +69,16 @@ const displayProductDetail = (product) => {
             </div>
         </section>
 
-        <div class="related-products">
+        <section class="product-card">
+            <div class="product-info">
+                <div class="product-description">
+                    <h3>Product Description</h3>
+                    <p>${product.overview || 'No description available.'}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
             <h2 class="related-title">Related Products</h2>
             <div class="product-grid">
                 ${relatedProducts.map(relatedProduct => `
@@ -85,16 +94,7 @@ const displayProductDetail = (product) => {
                     </div>
                 `).join('')}
             </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-info">
-                <div class="product-description">
-                    <h3>Product Description</h3>
-                    <p>${product.overview || 'No description available.'}</p>
-                </div>
-            </div>
-        </div>
+        </section>
     `;
 
     const sizeButtons = productDetailContainer.querySelectorAll('.size-btn');
