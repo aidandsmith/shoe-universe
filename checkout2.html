@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <script src="/scripts/form.js" defer></script>
     <link rel="stylesheet" href="styles/checkout.css">
+    <script defer src="scripts/cartCount.js"></script>
 </head>
 
 <body>
@@ -23,62 +24,68 @@
                 <a href="faq.html">Support</a>
             </div>
             <div class="rightNav">
-                <a href="cart.html">My Cart</a>
-                <img src="img/shopping-cart.png" alt="" height="40">
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <img src="/img/shopping-cart.png" alt="Cart" height="40">
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
-
-<h1>Payment Details</h1>
-<form class="user-info" action="/">
-    <div class="input-control">
-        <label class="form-label" for="nameOnCard">Cardholder Name</label>
-        <input class="form-input" id="nameOnCard" type="text" placeholder="John Doe">
-    </div>
-    <div class="input-control">
-        <label class="form-label" for="ccn">Credit Card Information</label>
-        <input class="form-input" id="ccn" type="tel" inputmode="numeric" placeholder="xxxx xxxx xxxx xxxx">
-        <div class="error"></div>
-    </div>
-    <div class="input-control">
-        <input class="form-input" type="tel" name="cvv" id="cvv" placeholder="Enter your CVV">
-        <div class="error"></div>
-    </div>
-    <div class="input-control">
-        <input class="form-input" type="tel" name="expiry" id="expiry" placeholder="Enter your Expiry Date">
-        <div class="error"></div>
-    </div>
-
-    <div class="input-control">
-        <label for="form-label" for="tos">I agree to the Terms and Conditions</label>
-        <input type="checkbox" id="tos" name="tos">
-    </div>
-
-
-    <button type="submit" class="form-btn">Complete Purchase</button>
-</form>
-
-<footer>
-    <img id="footerLogo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"
-        width="1421" height="572">
-    <div class="footerElements">
-        <div class="footerLinks">
-            <h4>Resources</h4>
-            <p>Products</p>
-            <p>Sizing Guide</p>
+    <h1>Payment Details</h1>
+    <form class="user-info" action="/">
+        <div class="input-control">
+            <label class="form-label" for="nameOnCard">Cardholder Name</label>
+            <input class="form-input" id="nameOnCard" type="text" placeholder="John Doe">
+            <div class="error"></div>
         </div>
-        <div class="footerLinks">
-            <h4>Services</h4>
-            <p>Customer Support / FAQ</p>
-            <p>Return Policy</p>
+        <div class="input-control">
+            <label class="form-label" for="ccn">Credit Card Number</label>
+            <input class="form-input" id="ccn" type="tel" inputmode="numeric" placeholder="xxxx xxxx xxxx xxxx">
+            <div class="error"></div>
         </div>
-        <div class="footerLinks">
-            <h4>Legal</h4>
-            <p>Terms</p>
-            <p>Privacy</p>
+        <div class="input-control">
+            <label class="form-label" for="cvv">CVV</label>
+            <input class="form-input" type="tel" name="cvv" id="cvv" placeholder="Enter your CVV">
+            <div class="error"></div>
         </div>
-    </div>
-</footer>
+        <div class="input-control">
+            <label class="form-label" for="expiry">Expiry Date</label>
+            <input class="form-input" type="tel" name="expiry" id="expiry" placeholder="MM/YY">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label class="form-label" for="tos">
+                <input type="checkbox" id="tos" name="tos">
+                I agree to the Terms and Conditions
+            </label>
+            <div class="error"></div>
+        </div>
+        <button type="submit" class="form-btn">Complete Purchase</button>
+    </form>
+
+    <footer>
+        <img id="footerLogo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"
+            width="1421" height="572">
+        <div class="footerElements">
+            <div class="footerLinks">
+                <h4>Resources</h4>
+                <p>Products</p>
+                <p>Sizing Guide</p>
+            </div>
+            <div class="footerLinks">
+                <h4>Services</h4>
+                <p>Customer Support / FAQ</p>
+                <p>Return Policy</p>
+            </div>
+            <div class="footerLinks">
+                <h4>Legal</h4>
+                <p>Terms</p>
+                <p>Privacy</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

@@ -1,11 +1,12 @@
 const form = document.querySelector('form');
+
 const email = document.getElementById('clientmail');
 const firstname = document.getElementById('firstname');
 const lastname = document.getElementById('lastname');
 const address = document.getElementById('address');
 const city = document.getElementById('city');
 const provinceOrTerritory = document.getElementById('provinceOrTerritory');
-const postalCode = document.getElementById('postalCode')
+const postalCode = document.getElementById('postalCode');
 const phone = document.getElementById('phone');
 const cardName = document.getElementById('nameOnCard');
 const ccn = document.getElementById('ccn');
@@ -14,9 +15,13 @@ const expiry = document.getElementById('expiry');
 const tos = document.getElementById('tos');
 
 form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  checkInputs();
+    e.preventDefault();
+
+    if (cardName) {
+        checkInputs2();
+    } else {
+        checkInputs();
+    }
 });
 
 const isValidEmail = email => {
@@ -69,11 +74,8 @@ const checkInputs = () => {
     const lastnameValue = lastname.value.trim();
     const addressValue = address.value.trim();
     const cityValue = city.value.trim();
-    const provinceOrTerritoryValue = provinceOrTerritory.value.trim();
+    const provinceOrTerritoryValue = provinceOrTerritory.value;
     const postalCodeValue = postalCode.value.trim();
-    const ccnValue = ccn.value.trim();
-    const cvvValue = cvv.value.trim();
-    const expiryValue = expiry.value.trim();
     
     if (addressValue === '') {
         setError(address, 'Address cannot be blank');
@@ -81,6 +83,24 @@ const checkInputs = () => {
         setError(address, 'Address is too short');
     } else {
         setSuccess(address);
+    }
+
+    if(cityValue === '') {
+        setError(city, 'City cannot be blank');
+    } else {
+        setSuccess(city);
+    }
+
+    if(provinceOrTerritoryValue === '') {
+        setError(provinceOrTerritory, 'Please select a province or territory');
+    } else {
+        setSuccess(provinceOrTerritory);
+    }
+
+    if(postalCodeValue === '') {
+        setError(postalCode, 'Postal Code cannot be blank');
+    } else {
+        setSuccess(postalCode);
     }
 
     if(emailValue === '') {
@@ -111,6 +131,32 @@ const checkInputs = () => {
         setSuccess(phone);
     }
 
+    if(addressValue !== '' && 
+       emailValue !== '' && 
+       phoneValue !== '' && 
+       firstnameValue !== '' && 
+       lastnameValue !== '' && 
+       cityValue !== '' &&
+       provinceOrTerritoryValue !== '' &&
+       postalCodeValue !== '' &&
+       isValidEmail(emailValue) && 
+       isValidPhone(phoneValue)) {
+        window.location.href = 'checkout2.html';
+    }
+};
+
+const checkInputs2 = () => {
+    const cardNameValue = cardName.value.trim();
+    const ccnValue = ccn.value.trim();
+    const cvvValue = cvv.value.trim();
+    const expiryValue = expiry.value.trim();
+
+    if(cardNameValue === '') {
+        setError(cardName, 'Card name cannot be blank');
+    } else {
+        setSuccess(cardName);
+    }
+
     if(ccnValue === '') {
         setError(ccn, 'Credit card number cannot be blank');
     } else if (!isValidCCN(ccnValue)) {
@@ -134,8 +180,22 @@ const checkInputs = () => {
     } else {
         setSuccess(expiry);
     }
- 
-    if(addressValue !== '' && emailValue !== '' && phoneValue !== '' && firstnameValue !== '' && lastnameValue !== '' && ccnValue !== '' && cvvValue !== '' && expiryValue !== '' && isValidEmail(emailValue) && isValidPhone(phoneValue) && isValidCVV(cvvValue) && isValidExpiry(expiryValue) && isValidCCN(ccnValue)) {
+
+    if(!tos.checked) {
+        setError(tos, 'You must agree to the Terms and Conditions');
+    } else {
+        setSuccess(tos);
+    }
+
+    if(cardNameValue !== '' && 
+       ccnValue !== '' && 
+       cvvValue !== '' && 
+       expiryValue !== '' && 
+       tos.checked &&
+       isValidCCN(ccnValue) && 
+       isValidCVV(cvvValue) && 
+       isValidExpiry(expiryValue)) {
         window.location.href = 'confirmation.html';
     }
 };
+
