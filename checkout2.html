@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoeniverse | Checkout</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="/scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/checkout.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img id="nav-logo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"
+                width="1421" height="572">
+            <div class="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="sizing.html">Sizing Guide</a>
+                <a href="product.html">Products</a>
+                <a href="faq.html">Support</a>
+            </div>
+            <div class="rightNav">
+                <a href="cart.html">My Cart</a>
+                <img src="img/shopping-cart.png" alt="" height="40">
+            </div>
+        </nav>
+    </header>
+
+<h1>Payment Details</h1>
+<form class="user-info" action="/">
+    <div class="input-control">
+        <label class="form-label" for="nameOnCard">Cardholder Name</label>
+        <input class="form-input" id="nameOnCard" type="text" placeholder="John Doe">
+    </div>
+    <div class="input-control">
+        <label class="form-label" for="ccn">Credit Card Information</label>
+        <input class="form-input" id="ccn" type="tel" inputmode="numeric" placeholder="xxxx xxxx xxxx xxxx">
+        <div class="error"></div>
+    </div>
+    <div class="input-control">
+        <input class="form-input" type="tel" name="cvv" id="cvv" placeholder="Enter your CVV">
+        <div class="error"></div>
+    </div>
+    <div class="input-control">
+        <input class="form-input" type="tel" name="expiry" id="expiry" placeholder="Enter your Expiry Date">
+        <div class="error"></div>
+    </div>
+
+    <div class="input-control">
+        <label for="form-label" for="tos">I agree to the Terms and Conditions</label>
+        <input type="checkbox" id="tos" name="tos">
+    </div>
+
+
+    <button type="submit" class="form-btn">Complete Purchase</button>
+</form>
+
+<footer>
+    <img id="footerLogo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"
+        width="1421" height="572">
+    <div class="footerElements">
+        <div class="footerLinks">
+            <h4>Resources</h4>
+            <p>Products</p>
+            <p>Sizing Guide</p>
+        </div>
+        <div class="footerLinks">
+            <h4>Services</h4>
+            <p>Customer Support / FAQ</p>
+            <p>Return Policy</p>
+        </div>
+        <div class="footerLinks">
+            <h4>Legal</h4>
+            <p>Terms</p>
+            <p>Privacy</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

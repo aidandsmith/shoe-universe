@@ -1,0 +1,25 @@
+.confirmationContainer {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.conirmationBox {
+    background-color: #fbf7f5;
+    padding: 4rem;
+    border: 2px solid#196ba3;;
+    border-radius: 10px;
+
+}
+
+span {
+    color: #196ba3;
+}
+
+.numberStyle {
+    font-weight: bold;
+}
