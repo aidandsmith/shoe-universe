@@ -19,7 +19,7 @@
 }
 
 .heroText h1 {
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: 600;
 }
 
@@ -68,10 +68,6 @@
   align-items: center;
 }
 
-.newsletter p {
-  font-size: 1.2rem;
-}
-
 .newsletterBox {
   display: flex;
   align-items: center;
@@ -80,7 +76,6 @@
 }
 
 .newsletterBox label {
-  font-size: 1.2rem;
   margin: 1rem;
   font-weight: bold;
 }
