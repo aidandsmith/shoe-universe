@@ -74,7 +74,7 @@ const displayProductDetail = (product) => {
                                  alt="${relatedProduct.name}">
                         </div>
                         <div class="product-item-details">
-                            <h3 class="product-item-title">${relatedProduct.name}</h3>
+                            <h4 class="product-item-title">${relatedProduct.name}</h4>
                             <div class="product-item-price">$${relatedProduct.price}</div>
                         </div>
                     </div>
