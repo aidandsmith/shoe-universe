@@ -7,7 +7,6 @@ body main {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem 1rem;
-  /* max-width: 88rem; */
   margin: 0 auto;
 }
 
@@ -54,7 +53,6 @@ body main {
   font-size: 1.75rem;
   font-weight: 800;
   color: #2563eb;
-  /* margin-bottom: 0.75rem; */
 }
 
 .product-description {
@@ -99,11 +97,6 @@ body main {
   font-size: 0.7rem;
   color: #4b5563;
   transition: all 0.2s ease;
-}
-
-.size:hover {
-  background-color: #e0f2fe;
-  color: #2563eb;
 }
 
 .view-product-btn {
