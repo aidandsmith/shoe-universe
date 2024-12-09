@@ -23,3 +23,19 @@ span {
 .numberStyle {
     font-weight: bold;
 }
+
+.return-home-btn {
+    display: block;
+    background-color: #196ba3;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.return-home-btn:hover {
+    background-color: #145785;
+}

@@ -111,3 +111,18 @@ input[type="checkbox"] {
 .input-control .error {
   color: #ff3860;
 }
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-wrapper label {
+    margin-bottom: 0;
+}

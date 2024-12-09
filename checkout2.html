@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoeniverse | Checkout</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="/scripts/form.js" defer></script>
     <link rel="stylesheet" href="styles/checkout.css">
+    <script defer src="scripts/form2.js"></script>
     <script defer src="scripts/cartCount.js"></script>
 </head>
 
@@ -56,10 +56,12 @@
             <div class="error"></div>
         </div>
         <div class="input-control">
-            <label class="form-label" for="tos">
+            <div class="checkbox-wrapper">
                 <input type="checkbox" id="tos" name="tos">
-                I agree to the Terms and Conditions
-            </label>
+                <label class="form-label" for="tos">
+                    I agree to the Terms and Conditions
+                </label>
+            </div>
             <div class="error"></div>
         </div>
         <button type="submit" class="form-btn">Complete Purchase</button>

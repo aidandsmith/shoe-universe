@@ -99,7 +99,7 @@ const displayCart = () => {
                 <span>Total</span>
                 <span>$${total.toFixed(2)}</span>
             </div>
-            <button class="btn-checkout">Proceed to Checkout →</button>
+            <button class="btn-checkout" onClick="window.location.href='checkout.html'">Proceed to Checkout →</button>
         </div>
     `;
 };
