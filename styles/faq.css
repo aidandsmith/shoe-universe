@@ -1,22 +1,14 @@
-body {
+#puddle {
+  display: block;
+  max-width: 33rem;
+  width: 90vw;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 9px;
 }
 
-body main {
-  max-width: 80ch;
-  margin: 0 auto;
-}
-
-body a {
-}
-
-h1,
-h2 {
-  color: #196ba3;
-}
 /* =========== Accordion =========== */
 .accordion {
-  margin: 20px;
-
   border: 2px solid #196ba3;
 }
 
@@ -28,6 +20,7 @@ h2 {
   background-color: #f9f9f9;
   cursor: pointer;
   padding: 1rem;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   text-align: left;
@@ -46,6 +39,14 @@ h2 {
 
 .accordionIcon {
   float: right;
-  font-size: 1rem;
 }
-/* =============================== */
+
+@media screen and (max-width: 480px) {
+  .accordion-header {
+    padding: 0.5rem;
+  }
+
+  .accordion-content {
+    padding: 0.5rem;
+  }
+}

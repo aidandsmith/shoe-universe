@@ -1,15 +1,5 @@
-body main {
-  max-width: 80ch;
-  margin: 0 auto;
-  padding: 0.5rem;
-}
-
-body a {
-}
-
-h1,
-h2 {
-  color: #196ba3;
+main h2 {
+  font-size: 2.3rem;
 }
 
 /* =========== Tables =========== */
@@ -27,10 +17,10 @@ thead {
 
 th,
 td {
-  padding: 10px;
+  padding: 0.9rem;
   border: 1px solid #ddd;
   text-align: center;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 tbody tr:nth-child(even) {
@@ -42,6 +32,7 @@ tbody tr:hover {
 }
 
 .table-heading {
+  font-size: 1.6rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -54,4 +45,11 @@ tbody tr:hover {
 
 .table-container {
   margin: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  th,
+  td {
+    padding: 0.5rem;
+  }
 }

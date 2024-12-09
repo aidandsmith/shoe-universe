@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoeniverse | Checkout</title>
+    <title>Shoeniverse | Home</title>
     <link rel="stylesheet" href="styles/main.css">
     <script defer src="scripts/cartCount.js"></script>
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/script.js" defer></script>
 </head>
-<body>
 
-<header>
-    <nav>
-        <div class="leftNav">
-            <img src="/img/shoeniverseLogo.png" alt="" width="200px">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="sizing.html">Sizing Guide</a>
-            <a href="product.html">Products</a>
-            <a href="faq.html">Support</a>
-        </div>
-        <div class="rightNav">
-            <div class="cart-icon">
-                <a href="cart.html">
-                    <img src="/img/shopping-cart.png" alt="Cart" height="40">
-                    <span class="cart-count" id="cart-count">0</span>
-                </a>
+<body>
+    <header>
+        <nav>
+            <img id="nav-logo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"
+                width="1421" height="572">
+            <div class="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="sizing.html">Sizing Guide</a>
+                <a href="product.html">Products</a>
+                <a href="faq.html">Support</a>
             </div>
-        </div>
-    </nav>
-</header>
+            <div class="rightNav">
+                <a href="cart.html">My Cart</a>
+                <img src="img/shopping-cart.png" alt="" height="40">
+            </div>
+        </nav>
+    </header>
 
 <section class="heroImg">
     <div class="heroText">
@@ -38,45 +38,45 @@
     </div>
 </section>
 
-<section class="welcome">
-    <h2>Welcome to shoeniverse</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur illum tempore aut beatae eligendi placeat impedit sunt, minima, sit, voluptatibus incidunt. Provident corrupti rerum, iusto tempore temporibus voluptate molestias totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero illum nesciunt amet iusto quisquam fugiat optio dolorum non, aliquid vitae nostrum magnam hic architecto ea exercitationem nihil voluptatibus quod nobis!</p>
-</section>
+    <section class="welcome">
+        <h2>Welcome to Shoeniverse</h2>
+        <p>Discover a universe of style, comfort, and quality. Our top-of-the-line selection will have people taking second looks at your feet all day. We understand the busy lives of our customers, so we set out to make this website simple and seamless. We believe that every step you take should be extraordinary. Explore and find your perfect fit today.</p>
+    </section>
 
-<section class="newsletter">
-    <div class="newsletterText">
-        <h3>Subscribe to never miss a drop</h3>
-        <p>Stay in the loop and never miss out - join our mailing list for exclusive updates, perks, and more.</p>
-        <div class="newsletterBox">
-            <label for="email">Enter your email:</label>
-            <input type="email" id="newsletterEmail" name="email">
-            <button class="emailButton">Subscribe</button>
+    <section class="newsletter">
+        <div class="newsletterText">
+            <h3>Subscribe to never miss a drop</h3>
+            <p>Stay in the loop and never miss out - join our mailing list for exclusive updates, perks, and more.</p>
+            <div class="newsletterBox">
+                <label for="email">Enter your email:</label>
+                <input type="email" id="newsletterEmail" name="email"
+                    pattern="[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}">
+                <button id="emailButton">Subscribe</button>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="footerLogo">
-        <img src="/img/shoeniverseLogo.png" alt="" width="300">
-    </div>
-    <div class="footerElements">
-        <div class="resources">
-            <h4>Resources</h4>
-            <p>Products</p>
-            <p>Sizing Guide</p>
+    <footer>
+        <img id="footerLogo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"
+            width="1421" height="572">
+        <div class="footerElements">
+            <div class="footerLinks">
+                <h4>Resources</h4>
+                <p>Products</p>
+                <p>Sizing Guide</p>
+            </div>
+            <div class="footerLinks">
+                <h4>Services</h4>
+                <p>Customer Support</p>
+                <p>Return Policy</p>
+            </div>
+            <div class="footerLinks">
+                <h4>Legal</h4>
+                <p>Terms</p>
+                <p>Privacy</p>
+            </div>
         </div>
-        <div class="support">
-            <h4>Services</h4>
-            <p>Customer Support / FAQ</p>
-            <p>Return Policy</p>
-        </div>
-        <div class="legal">
-            <h4>Legal</h4>
-            <p>Terms</p>
-            <p>Privacy</p>
-        </div>
-    </div>
-</footer>
-    
+    </footer>
 </body>
+
 </html>
