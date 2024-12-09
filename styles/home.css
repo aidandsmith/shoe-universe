@@ -47,8 +47,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  max-width: 80ch;
+}
+
+.welcome h2 {
+  text-align: center;
 }
 
 /* Newsletter */
@@ -57,33 +59,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  max-width: 80ch;
+  justify-content: center;
+}
+
+.newsletter h3 {
+  text-align: center;
 }
 
 .newsletterText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .newsletterBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem;
+  text-align: center;
+  margin: 2rem 1rem;
 }
 
 .newsletterBox label {
-  margin: 1rem;
   font-weight: bold;
 }
 
 input[type="email"] {
   min-width: 30ch;
   padding: 10px;
-  margin: 1rem 0rem;
+  margin: 1rem 1rem;
   border: 1px solid black;
   border-radius: 3px;
 }
@@ -92,7 +90,6 @@ input[type="email"] {
   padding: 1.2rem;
   padding: 10px;
   margin: 8px 0px;
-  margin-left: 1.2rem;
   cursor: pointer;
   background-color: #196ba3;
   color: white;
@@ -113,10 +110,15 @@ input[type="email"] {
 
 @media only screen and (max-width: 600px) {
   .heroText h1 {
-    font-size: 3rem;
+    font-size: 2.9rem;
   }
-
   .heroText p {
+    font-size: 2rem;
+  }
+  .welcome h2 {
+    font-size: 2.7rem;
+  }
+  .newsletter h3 {
     font-size: 2rem;
   }
 }
