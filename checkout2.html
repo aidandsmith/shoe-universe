@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoeniverse | Home</title>
+    <title>Shoeniverse | Checkout</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <script defer src="scripts/form2.js"></script>
     <script defer src="scripts/cartCount.js"></script>
-    <link rel="stylesheet" href="styles/home.css">
-    <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
@@ -33,36 +33,39 @@
             </div>
         </nav>
     </header>
-
-<section class="heroImg">
-    <div class="heroText">
-        <h1>Shoeniverse</h1>
-        <p>Step into style.</p>
-        <button class="heroButton">Shop Now</button>
-    </div>
-</section>
-
-    <main>
-        <section class="welcome">
-            <h2>Welcome to Shoeniverse</h2>
-            <p>Discover a universe of style, comfort, and quality. Our top-of-the-line selection will have people taking
-                second looks at your feet all day. We understand the busy lives of our customers, so we set out to make
-                this website simple and seamless. We believe that every step you take should be extraordinary. Explore
-                and find your perfect fit today.</p>
-        </section>
-
-        <section class="newsletter">
-            <h3>Subscribe to never miss a drop</h3>
-            <p>Stay in the loop and never miss out - join our mailing list for exclusive updates, perks, and more.
-            </p>
-            <div class="newsletterBox">
-                <label for="newsletterEmail">Enter your email:</label>
-                <input type="email" id="newsletterEmail" name="email"
-                    pattern="[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}">
-                <button id="emailButton">Subscribe</button>
+    <h1>Payment Details</h1>
+    <form class="user-info" action="/">
+        <div class="input-control">
+            <label class="form-label" for="nameOnCard">Cardholder Name</label>
+            <input class="form-input" id="nameOnCard" type="text" placeholder="John Doe">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label class="form-label" for="ccn">Credit Card Number</label>
+            <input class="form-input" id="ccn" type="tel" inputmode="numeric" placeholder="xxxx xxxx xxxx xxxx">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label class="form-label" for="cvv">CVV</label>
+            <input class="form-input" type="tel" name="cvv" id="cvv" placeholder="Enter your CVV">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label class="form-label" for="expiry">Expiry Date</label>
+            <input class="form-input" type="tel" name="expiry" id="expiry" placeholder="MM/YY">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="tos" name="tos">
+                <label class="form-label" for="tos">
+                    I agree to the Terms and Conditions
+                </label>
             </div>
-        </section>
-    </main>
+            <div class="error"></div>
+        </div>
+        <button type="submit" class="form-btn">Complete Purchase</button>
+    </form>
 
     <footer>
         <img id="footerLogo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"
@@ -75,7 +78,7 @@
             </div>
             <div class="footerLinks">
                 <h4>Services</h4>
-                <p>Customer Support</p>
+                <p>Customer Support / FAQ</p>
                 <p>Return Policy</p>
             </div>
             <div class="footerLinks">
@@ -85,6 +88,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

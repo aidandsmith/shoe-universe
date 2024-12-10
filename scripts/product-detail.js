@@ -11,6 +11,11 @@ const convertToUSSize = (ukSize) => {
 	return `US ${usSize}`;
 };
 
+const getCart = () => {
+    const cart = localStorage.getItem('cart');
+    return cart ? JSON.parse(cart) : [];
+};
+
 const displayProductDetail = (product) => {
     const productDetailContainer = document.getElementById('product-detail');
     // Gets 3 random products to display as related products
@@ -64,7 +69,16 @@ const displayProductDetail = (product) => {
             </div>
         </section>
 
-        <div class="related-products">
+        <section class="product-card">
+            <div class="product-info">
+                <div class="product-description">
+                    <h3>Product Description</h3>
+                    <p>${product.overview || 'No description available.'}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
             <h2 class="related-title">Related Products</h2>
             <div class="product-grid">
                 ${relatedProducts.map(relatedProduct => `
@@ -74,22 +88,13 @@ const displayProductDetail = (product) => {
                                  alt="${relatedProduct.name}">
                         </div>
                         <div class="product-item-details">
-                            <h3 class="product-item-title">${relatedProduct.name}</h3>
+                            <h4 class="product-item-title">${relatedProduct.name}</h4>
                             <div class="product-item-price">$${relatedProduct.price}</div>
                         </div>
                     </div>
                 `).join('')}
             </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-info">
-                <div class="product-description">
-                    <h3>Product Description</h3>
-                    <p>${product.overview || 'No description available.'}</p>
-                </div>
-            </div>
-        </div>
+        </section>
     `;
 
     const sizeButtons = productDetailContainer.querySelectorAll('.size-btn');
@@ -112,6 +117,38 @@ const displayProductDetail = (product) => {
             const productId = item.dataset.productId;
             window.location.href = `product-detail.html?id=${productId}`;
         });
+    });
+
+    buyNowBtn.addEventListener('click', () => {
+        const selectedSize = productDetailContainer.querySelector('.size-btn.selected');
+        if (!selectedSize) return;
+
+        const cart = getCart();
+        const cartItem = {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            size: selectedSize.dataset.size,
+            image: product.img,
+            quantity: 1
+        };
+
+        cart.push(cartItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        updateCartCount();
+        
+        // Optional: Show success message
+        buyNowBtn.innerHTML = `
+            <span class="btn-text">Added to Cart!</span>
+            <span class="btn-icon">✓</span>
+        `;
+        setTimeout(() => {
+            buyNowBtn.innerHTML = `
+                <span class="btn-text">Add to Cart</span>
+                <span class="btn-icon">→</span>
+            `;
+        }, 2000);
     });
 };
 

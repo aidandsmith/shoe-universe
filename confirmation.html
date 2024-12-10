@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Jordan Shoes</title>
+    <title>Shoeniverse | Home</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/cart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script defer src="scripts/cart.js"></script>
+    <link rel="stylesheet" href="/styles/confirmation.css">
+    <script src="/scripts/confirmation.js" defer></script>
+    <script defer src="scripts/cartCount.js"></script>
 </head>
 
 <body>
@@ -34,11 +34,18 @@
         </nav>
     </header>
 
-    <div class="cart-container">
-        <h1>Shopping Cart</h1>
-        <div id="cart-items" class="cart-items"></div>
-        <div id="cart-summary" class="cart-summary"></div>
-    </div>
+    <main class="confirmationContainer">
+        <div class="conirmationBox">
+            <h1>Order Confirmed</h1>
+            <p>Thank you for your purchase.</p>
+            <p>An invoice has been sent to your email. Please contact <span>support@shoeniverse.ca</span> if you have any questions regarding your order.</p>
+            <div class="orderDetails">
+                <p class="numberStyle">Order Number: <span id="orderCode" class="orderSpan"></span></p>
+            </div>
+            <p>Thank you from the Shoeniverse Team.</p>
+            <a href="index.html" class="return-home-btn">Return to Home</a>
+        </div>
+    </main>
 
     <footer>
         <img id="footerLogo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"
@@ -61,7 +68,6 @@
             </div>
         </div>
     </footer>
-    
 </body>
 
 </html>
