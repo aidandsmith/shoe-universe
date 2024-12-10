@@ -198,19 +198,25 @@
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   padding: 0 1.5rem;
 }
 
 .product-item {
+  max-width: 13rem;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-item h4 {
+  font-size: 1.2rem;
 }
 
 .product-item:hover {
@@ -244,7 +250,10 @@
 }
 
 @media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  .product-card {
+    padding: 1rem;
+  }
+  .product-main {
+    margin: 1rem auto;
   }
 }
