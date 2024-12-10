@@ -69,7 +69,7 @@ const displayCart = () => {
                     <span>${item.quantity}</span>
                     <button onclick="updateQuantity(${index}, 1)">+</button>
                     <button class="remove-btn" onclick="removeFromCart(${index})" title="Remove item">
-                        <i class="fas fa-trash"></i>
+                        <i class="fas fa-trash"></i> Remove
                     </button>
                 </div>
             </div>
