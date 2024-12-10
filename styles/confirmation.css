@@ -1,41 +1,50 @@
 .confirmationContainer {
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 1rem;
 }
 
 .conirmationBox {
-    background-color: #fbf7f5;
-    padding: 4rem;
-    border: 2px solid#196ba3;;
-    border-radius: 10px;
-
+  background-color: #fbf7f5;
+  padding: 4rem;
+  border: 2px solid#196ba3;
+  border-radius: 10px;
 }
 
 span {
-    color: #196ba3;
+  color: #196ba3;
 }
 
 .numberStyle {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .return-home-btn {
-    display: block;
-    background-color: #196ba3;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 2rem;
-    text-align: center;
-    transition: background-color 0.3s ease;
+  display: block;
+  background-color: #196ba3;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 2rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .return-home-btn:hover {
-    background-color: #145785;
+  background-color: #145785;
+}
+
+@media screen and (max-width: 500px) {
+  .confirmationContainer h1 {
+    font-size: 3rem;
+  }
+
+  .conirmationBox {
+    padding: 1rem;
+    margin: 1rem;
+  }
 }
