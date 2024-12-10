@@ -33,39 +33,41 @@
             </div>
         </nav>
     </header>
-    <h1>Payment Details</h1>
-    <form class="user-info" action="/">
-        <div class="input-control">
-            <label class="form-label" for="nameOnCard">Cardholder Name</label>
-            <input class="form-input" id="nameOnCard" type="text" placeholder="John Doe">
-            <div class="error"></div>
-        </div>
-        <div class="input-control">
-            <label class="form-label" for="ccn">Credit Card Number</label>
-            <input class="form-input" id="ccn" type="tel" inputmode="numeric" placeholder="xxxx xxxx xxxx xxxx">
-            <div class="error"></div>
-        </div>
-        <div class="input-control">
-            <label class="form-label" for="cvv">CVV</label>
-            <input class="form-input" type="tel" name="cvv" id="cvv" placeholder="Enter your CVV">
-            <div class="error"></div>
-        </div>
-        <div class="input-control">
-            <label class="form-label" for="expiry">Expiry Date</label>
-            <input class="form-input" type="tel" name="expiry" id="expiry" placeholder="MM/YY">
-            <div class="error"></div>
-        </div>
-        <div class="input-control">
-            <div class="checkbox-wrapper">
-                <input type="checkbox" id="tos" name="tos">
-                <label class="form-label" for="tos">
-                    I agree to the Terms and Conditions
-                </label>
+    <main>
+        <h1>Payment Details</h1>
+        <form class="user-info" action="/">
+            <div class="input-control">
+                <label class="form-label" for="nameOnCard">Cardholder Name</label>
+                <input class="form-input" id="nameOnCard" type="text" placeholder="John Doe">
+                <div class="error"></div>
             </div>
-            <div class="error"></div>
-        </div>
-        <button type="submit" class="form-btn">Complete Purchase</button>
-    </form>
+            <div class="input-control">
+                <label class="form-label" for="ccn">Credit Card Number</label>
+                <input class="form-input" id="ccn" type="tel" inputmode="numeric" placeholder="xxxx xxxx xxxx xxxx">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label class="form-label" for="cvv">CVV</label>
+                <input class="form-input" type="tel" name="cvv" id="cvv" placeholder="Enter credit card CVV">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label class="form-label" for="expiry">Expiry Date</label>
+                <input class="form-input" type="tel" name="expiry" id="expiry" placeholder="MM/YY">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="tos" name="tos">
+                    <label class="form-label" for="tos">
+                        I agree to the Terms and Conditions
+                    </label>
+                </div>
+                <div class="error"></div>
+            </div>
+            <button type="submit" class="form-btn">Complete Purchase</button>
+        </form>
+    </main>
 
     <footer>
         <img id="footerLogo" src="img/shoeniverseLogo.png" alt="logo of a shoe surrounded by a ring of Saturn"

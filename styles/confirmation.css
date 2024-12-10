@@ -1,15 +1,18 @@
 .confirmationContainer {
-  min-height: 80vh;
+  /* min-height: 80vh; */
+  /* min-height: 44rem; */
+  padding: 5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin: 1rem;
+  margin: 1rem auto;
 }
 
 .conirmationBox {
   background-color: #fbf7f5;
-  padding: 4rem;
+  margin: 1rem;
+  padding: 3rem;
   border: 2px solid#196ba3;
   border-radius: 10px;
 }
@@ -38,9 +41,9 @@ span {
   background-color: #145785;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .confirmationContainer h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .conirmationBox {
