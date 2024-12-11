@@ -155,3 +155,13 @@ footer {
 .footerLinks {
   margin: 0 0.5rem;
 }
+
+.footerTag {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footerTag:hover {
+  text-decoration: underline;
+  color: #196ba3;
+}
