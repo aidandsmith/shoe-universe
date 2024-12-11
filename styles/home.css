@@ -1,7 +1,7 @@
 /* Hero */
 
 .heroImg {
-  background-image: url(./img/shoeHero.jpg);
+  background-image: url(../img/shoeHero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
