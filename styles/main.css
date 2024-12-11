@@ -165,3 +165,7 @@ footer {
   text-decoration: underline;
   color: #196ba3;
 }
+
+.footerTag:active {
+  text-decoration: none;
+}
